@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TaxiMagicRoshambo.iml" filepath="$PROJECT_DIR$/TaxiMagicRoshambo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roshambo/roshambo.iml" filepath="$PROJECT_DIR$/roshambo/roshambo.iml" />
+    </modules>
+  </component>
+</project>
+
