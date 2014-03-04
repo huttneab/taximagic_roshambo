@@ -1,11 +1,12 @@
 package com.taximagicroshambo.roshambo;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Roshambo extends Activity {
+public class Roshambo extends Activity implements RoshamboFragment.OnFragmentInteractionListener, RoshamboHistoryFragmentFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,4 +35,13 @@ public class Roshambo extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onFragmentInteraction(String id) {
+
+    }
 }

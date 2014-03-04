@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context="com.taximagicroshambo.roshambo.RoshamboFragment">
+
+    <ImageButton
+        android:id="@+id/rock"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_width"
+        android:contentDescription="@string/rock"/>
+    <ImageButton
+        android:id="@+id/paper"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_width"
+        android:contentDescription="@string/paper"/>
+    <ImageButton
+        android:id="@+id/scissors"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_width"
+        android:contentDescription="@string/scissors"/>
+
+</LinearLayout>
