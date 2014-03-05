@@ -145,7 +145,7 @@ public class RoshamboContentProvider extends ContentProvider {
 
         public static final String DATE_COLUMN = "created_at";
 
-        public static final String DEFAULT_SORT = DATE_COLUMN + " DECENDING ";
+        public static final String DEFAULT_SORT = DATE_COLUMN + " DESC ";
 
     }
 }

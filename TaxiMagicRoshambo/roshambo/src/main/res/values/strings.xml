@@ -12,4 +12,6 @@
     <string name="scissors">scissors</string>
 
     <string name="server_address">http://roshambo.herokuapp.com/throws</string>
+
+    <string name="empty_text">no games played</string>
 </resources>
