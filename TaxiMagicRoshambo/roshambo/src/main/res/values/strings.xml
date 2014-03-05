@@ -10,4 +10,6 @@
     <string name="rock">rock</string>
     <string name="paper">paper</string>
     <string name="scissors">scissors</string>
+
+    <string name="server_address">http://roshambo.herokuapp.com/throws</string>
 </resources>
