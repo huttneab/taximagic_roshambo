@@ -7,9 +7,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="history_frag_title">Roshambo History</string>
-    <string name="rock">rock</string>
-    <string name="paper">paper</string>
-    <string name="scissors">scissors</string>
+    <string name="rock">R</string>
+    <string name="paper">P</string>
+    <string name="scissors">S</string>
 
     <string name="server_address">http://roshambo.herokuapp.com/throws</string>
 

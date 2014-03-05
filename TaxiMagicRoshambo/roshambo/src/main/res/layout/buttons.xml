@@ -1,22 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <ImageButton
+    <Button
         android:id="@+id/rock"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_width"
-        android:contentDescription="@string/rock" />
-    <ImageButton
+        android:text="@string/rock"
+        android:textAppearance="@style/RPS_Style"
+        android:textColor="@drawable/rock_text_color_selector"
+        android:background="#33B5E5"
+        android:contentDescription="@string/rock"
+        android:layout_margin="10dp" />
+
+    <Button
         android:id="@+id/paper"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_width"
-        android:contentDescription="@string/paper"/>
-    <ImageButton
+        android:text="@string/paper"
+        android:textAppearance="@style/RPS_Style"
+        android:textColor="@drawable/paper_text_color_selector"
+        android:background="#FFBB33"
+        android:contentDescription="@string/paper"
+        android:layout_margin="10dp" />
+
+    <Button
         android:id="@+id/scissors"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_width"
-        android:contentDescription="@string/scissors"/>
+        android:text="@string/scissors"
+        android:textAppearance="@style/RPS_Style"
+        android:textColor="@drawable/scissors_text_color_selector"
+        android:background="#FF4444"
+        android:contentDescription="@string/scissors"
+        android:layout_margin="10dp" />
 
 </merge>
