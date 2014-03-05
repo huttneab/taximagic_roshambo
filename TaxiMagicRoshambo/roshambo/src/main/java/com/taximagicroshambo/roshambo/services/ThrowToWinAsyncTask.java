@@ -1,5 +1,7 @@
 package com.taximagicroshambo.roshambo.services;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 
@@ -17,6 +19,11 @@ import java.net.URL;
 public class ThrowToWinAsyncTask extends AsyncTask<Uri, Void, Void> {
 
     boolean ioexception = false;
+    private Context applicationContext;
+
+    public ThrowToWinAsyncTask(Context context) {
+        applicationContext = context;
+    }
 
     @Override
     protected Void doInBackground(Uri... params) {
@@ -33,12 +40,15 @@ public class ThrowToWinAsyncTask extends AsyncTask<Uri, Void, Void> {
 
             byte[] response = readInputStream(in);
             String body = new String(response, "UTF-8");
-            // TODO: store to content provider once implemented
+
+            ContentValues cv = new ContentValues();
+            cv.put(RoshamboContentProvider.Columns.RESULTS_COLUMN, body);
+            applicationContext.getContentResolver().insert(RoshamboContentProvider.Columns.CONTENT_URI, cv);
 
         } catch (IOException e) {
             ioexception = true;
         } finally {
-            if(connection != null){
+            if (connection != null) {
                 connection.disconnect();
             }
 
@@ -47,8 +57,6 @@ public class ThrowToWinAsyncTask extends AsyncTask<Uri, Void, Void> {
             } catch (IOException e) {
                 ioexception = true;
             }
-
-
         }
 
         return null;
@@ -60,7 +68,7 @@ public class ThrowToWinAsyncTask extends AsyncTask<Uri, Void, Void> {
         byte[] buff = new byte[1024];
 
         int count;
-        while((count = in.read(buff)) != -1 ) {
+        while ((count = in.read(buff)) != -1) {
             out.write(buff, 0, count);
         }
 
