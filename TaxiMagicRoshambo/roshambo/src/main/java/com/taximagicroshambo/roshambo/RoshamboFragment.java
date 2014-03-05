@@ -89,7 +89,8 @@ public class RoshamboFragment extends Fragment implements View.OnClickListener{
         Uri.Builder builder = Uri.parse(getString(R.string.server_address)).buildUpon();
         builder.appendPath(choice);
 
-        new ThrowToWinAsyncTask().execute(builder.build());
+        // application context because insertion is independent of the activity
+        new ThrowToWinAsyncTask(getActivity().getApplicationContext()).execute(builder.build());
 
     }
 
